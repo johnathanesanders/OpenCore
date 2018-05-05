@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <member name="T:OpenCore.Common.Address">
+            <summary>Class <c>Address</c> models a physical street address.
+            </summary>
+        </member>
+        <member name="M:OpenCore.Common.Address.#ctor">
+            <summary>
+            This constructor is the base initializer for the class.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.City">
+            <summary>
+            <value>The name of the <c>City</c>.</value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.Country">
+            <summary>
+            <value>The properties of the <c>Country</c></value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.Identifier">
+            <summary>
+            <value>The internal <c>Identifier</c> of the address.</value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.Latitude">
+            <summary>
+            <value>The <c>Latitude</c> property represents the geographic coordinate that specifies the north-south position of the address.
+            <remark>If City, Country, PostalCode, Subdivision, and StreetAddress are not provided, then Latitude and Longitude are required.</remark>
+            </value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.Longitude">
+            <summary>
+            <value>The <c>Longitude</c> property represents the geographic coordinate that specifies the east-west position of the address.
+            <remark>If City, Country, PostalCode, Subdivision, and StreetAddress are not provided, then Latitude and Longitude are required.</remark>
+            </value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.PostalCode">
+            <summary>
+            <value>The <c>PostalCode</c> of the address.</value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.Subdivision">
+            <summary>
+            <value>The properties of the <c>Subdivision</c>.</value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.StreetAddress">
+            <summary>
+            <value>The <c>StreetAddress</c> property represents the number and street name of the address.</value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.StreetAddressAdditional">
+            <summary>
+            <value>The <c>StreetAddressAdditional</c> property represents street location information in addition to <c>StreetAddress</c>.</value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.TimeZone">
+            <summary>
+            <value>The properties of the <c>TimeZone</c>.</value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Address.UnLocode">
+            
+             <summary>The <c>UnLocode</c> property represents the official UN LOCODE value of the address
+             </summary>
+        </member>
+        <member name="T:OpenCore.Common.Country">
+            <summary>Class <c>Country</c> models a country.
+            </summary>
+        </member>
+        <member name="M:OpenCore.Common.Country.#ctor(System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            This constructor initializes the new country with the given <c>IsoNumeric</c> and <c>Name</c> params.
+            The <c>IsoNumeric</c> property is automatically applied as the <c>Identifier</c> property of the country.
+            </summary>
+            <param name="IsoNumeric"><c>IsoNumeric</c> is the ISO 3166-1 numeric code of the country.</param>
+            <param name="Name"><c>Name</c> is the ISO 3166-1 English short name for the country.</param>
+            <param name="CallingCode"><c>CallingCode</c> is the ITU-T E.123/E.164 international prefix code for the country.</param>
+            <param name="IsoThreeCode"><c>IsoThreeCode</c> is the ISO 3166-1 three character code of the country.</param>
+            <param name="IsoTwoCode"><c>IsoTwoCode</c> is the ISO 3166-1 two character code of the country.</param>
+        </member>
+        <member name="M:OpenCore.Common.Country.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.String)">
+            <summary>
+            This constructor initializes the new country with the given <c>Identifier</c>, <c>IsoNumeric</c>, and <c>Name</c> params.
+            </summary>
+            <param name="Identifier"><c>Identifier</c> is the internal identifier of the country.</param>
+            <param name="IsoNumeric"><c>IsoNumeric</c> is the ISO 3166-1 numeric code of the country.</param>
+            <param name="Name"><c>Name</c> is the ISO 3166-1 English short name for the country.</param>
+            <param name="CallingCode"><c>CallingCode</c> is the ITU-T E.123/E.164 international prefix code for the country.</param>
+            <param name="IsoThreeCode"><c>IsoThreeCode</c> is the ISO 3166-1 three character code of the country.</param>
+            <param name="IsoTwoCode"><c>IsoTwoCode</c> is the ISO 3166-1 two character code of the country.</param>
+        </member>
+        <member name="M:OpenCore.Common.Country.#ctor(System.Int32)">
+            <summary>
+            This constructor initializes the new country with only the <c>Identifier</c> when quick constructs are required for 
+            entities that will be referenced in a database in a later action.
+            </summary>
+            <param name="Identifier"><c>Identifier</c> is the internal identifier of the country.</param>
+        </member>
+        <member name="P:OpenCore.Common.Country.CallingCode">
+            <summary><value>The <c>CallingCode</c> property represents the ITU-T E.123/E.164 international 
+            prefix code for the country.</value></summary>
+        </member>
+        <member name="P:OpenCore.Common.Country.Identifier">
+            <summary><value>The <c>Identifier</c> property represents the internal identifier of the country. 
+            <remark>This identifier is not necessarily the same value as the IsoNumeric code.</remark></value></summary>
+        </member>
+        <member name="P:OpenCore.Common.Country.IsoThreeCode">
+            <summary><value>The <c>IsoThreeCode</c> property defines the ISO 3166-1 three character code of 
+            the country.</value></summary>
+        </member>
+        <member name="P:OpenCore.Common.Country.IsoTwoCode">
+            <summary><value>The <c>IsoTwoCode</c> property defines the ISO 3166-1 two character
+            code of the country.</value></summary>
+        </member>
+        <member name="P:OpenCore.Common.Country.IsoNumeric">
+            <summary><value>The <c>IsoNumeric</c> property defines the ISO 3166-1 numeric code 
+            of the country.</value></summary>
+        </member>
+        <member name="P:OpenCore.Common.Country.Name">
+            <summary><value>The <c>Name</c> property defines the ISO 3166-1 English short name
+            for the country.</value></summary>
+        </member>
+        <member name="T:OpenCore.Common.Currency">
+            <summary>
+            Class <c>Currency</c> models a currency using ISO 4217 specifications.
+            </summary>
+        </member>
+        <member name="M:OpenCore.Common.Currency.#ctor">
+            <summary>
+            This constructor is the base initializer for the class.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Currency.CountriesInUse">
+            <summary>
+            The <c>CountriesInUse</c> property represents a list of countries where the currency is in active use.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Currency.DigitsAfterDecimal">
+            <summary>
+            The <c>DigitsAfterDecimal</c> property represents the number of digits after the decimal when using the currency. Default is TWO (2).
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Currency.Identifier">
+            <summary>
+            The <c>Identifier</c> property represents the internal identifier of the currency.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Currency.IsoCode">
+            <summary>
+            The <c>IsoCode</c> property represents the ISO character code of the currency - including cryptocurrencies.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Currency.IsoNumeric">
+            <summary>
+            The <c>IsoNumeric</c> property represents the ISO numeric identifier of the currency.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Currency.Name">
+            <summary>
+            The <c>Name</c> property represents the common name of the currency.
+            </summary>
+        </member>
+        <member name="T:OpenCore.Common.Reference">
+            <summary>
+            Class <c>Reference</c> models referential key/value data for an object.
+            </summary>
+        </member>
+        <member name="M:OpenCore.Common.Reference.#ctor">
+            <summary>
+            This constructor is the base initializer for the class.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Reference.Key">
+            <summary>
+            The <c>Key</c> property represents the key or qualifier for the reference.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Reference.Value">
+            <summary>
+            The <c>Value</c> property represents the value of the reference.
+            </summary>
+        </member>
+        <member name="T:OpenCore.Common.Subdivision">
+            <summary>Class <c>Subdivision</c> models a subdivision, more commonly known as a state or province.
+            </summary>
+        </member>
+        <member name="M:OpenCore.Common.Subdivision.#ctor">
+            <summary>
+            This constructor is the base initializer for the class.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Subdivision.Abbreviation">
+            <summary>
+            The <c>Abbreviation</c> property represents the commonly accepted abbreviation of the subdivision.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Subdivision.Identifier">
+            <summary>
+            The <c>Identifier</c> property represents the internal identifier for the subdivision.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Subdivision.IsoCode">
+            <summary>
+            The <c>IsoCode</c> property represnts the ISO 3166-2 code for the Subdivision.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Subdivision.Name">
+            <summary>
+            The <c>Name</c> property represents the name of the subdivision without diacritics.
+            <example>Goteborg</example>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.Subdivision.NameWithDiacritics">
+            <summary>
+            The <c>NameWithDiacritics</c> property represents the name of the subdivison with diacritics.
+            <example>Göteborg</example>
+            </summary>
+        </member>
+        <member name="T:OpenCore.Common.TimeZone">
+            <summary>
+            Class <c>TimeZone</c> models the complexities of a time zone.
+            </summary>
+        </member>
+        <member name="M:OpenCore.Common.TimeZone.#ctor">
+            <summary>
+            This constructor is the base initializer for the class.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.TimeZone.Abbreviation">
+            <summary>
+            <value>The <c>Abbreviation</c> property represents the common abbreviation for the time zone, if applicable.</value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.TimeZone.Canonical">
+            <summary>
+            <value>The <c>Canonical</c> property represents the canonical time zone name as defined by the IANA time zone database.</value>
+            <example>e.g. <c>America/Chicago</c></example>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.TimeZone.Identifier">
+            <summary>
+            <value>The <c>Identifier</c> property represents the internal identifier of the time zone.</value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.TimeZone.MilitaryTimeZone">
+            <summary>
+            <value>The <c>MilitaryTimeZone</c> property represents the US Military/Nautical time zone abbreviation.</value>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.TimeZone.Name">
+            <summary>
+            The <c>Name</c> property represents the common name of the time zone, which differs from the <c>Canonical</c>.
+            <example>Central Time which canonically is America/Chicago</example>
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.TimeZone.ObservesDaylightSaving">
+            <summary>
+            The <c>ObservesDaylightSaving</c> property represents whether or not the time zone is a daylight saving zone.
+            </summary>
+        </member>
+        <member name="P:OpenCore.Common.TimeZone.UtcOffset">
+            <summary>
+            The <c>UtcOffset</c> property represents the offset from Coordinated Universal Time (UTC). 
+            </summary>
+        </member>
+    </members>
+</doc>
