@@ -37,7 +37,7 @@ namespace OpenCore.Common
 
         /// <summary>
         /// <value>The <c>Canonical</c> property represents the canonical time zone name as defined by the IANA time zone database.</value>
-        /// <example>e.g. <c>America/Chicago</c></example>
+        /// <example>e.g. <c>America/Chicago</c>.</example>
         /// </summary>
         public string Canonical
         {
